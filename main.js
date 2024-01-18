@@ -29,5 +29,10 @@ function countdown() {
     } else {
         difference--
     }
-    countdownHTML.innerHTML = difference
+
+    const hours = Math.floor(difference / (60 * 60))
+    const minutes = Math.floor(difference % (60 * 60) / 60 )
+    const seconds = Math.floor(difference % 60)
+
+    countdownHTML.innerHTML = `Mancano ${hours}:${minutes}:${seconds} alla lezione`
 };
